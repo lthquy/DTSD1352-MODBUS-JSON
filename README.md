@@ -1,4 +1,4 @@
-Tôi sử dụng board ESP32 M5Stack C3U kết nối module RS485 qua chân rx 6, tx 7. Chân A,B của module RS485 kết nối chân 21, 22 của đồng hồ Acrel DTSD1352.
+Tôi sử dụng board ESP32 M5Stack C3U kết nối module RS485 qua chân rx 6, tx 7. Chân A,B của module RS485 kết nối chân 21, 22 của đồng hồ Acrel DTSD1352.<br>
 Dữ liệu của đồng hồ được đọc thành 4 nhóm voltage, power, energy, thd và in ra kiểu json.
 Dữ liệu đọc từ đồng hồ sẽ được lưu vào bộ đệm, khi quá thời hạn CACHE_TIMEOUT mặc định là 10 giây thì lại đọc từ đồng hồ.
 File secret.h chứa tên và mật khẩu wifi.
