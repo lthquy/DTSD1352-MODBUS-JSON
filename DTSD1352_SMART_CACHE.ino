@@ -200,7 +200,7 @@ void setup() {
   
   // Khởi tạo Modbus
   Serial.println("1. Khoi tao Modbus RS485...");
-  Serial1.begin(BAUDRATE, SERIAL_8E1, RX_PIN, TX_PIN);
+  Serial1.begin(BAUDRATE, SERIAL_8N1, RX_PIN, TX_PIN);
   
   if (!meter.begin(&Serial1, DE_PIN, BAUDRATE)) {
     Serial.println("   X Loi khoi tao Modbus!");
