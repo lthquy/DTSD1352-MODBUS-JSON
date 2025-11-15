@@ -136,6 +136,8 @@ uint16_t ACREL_DTSD1352::readHoldingRegister(uint16_t address) {
     uint8_t result = _modbus.readHoldingRegisters(address, 1);
     
     if (result == _modbus.ku8MBSuccess) {
+      // Giảm lag khi đọc nhiều thanh ghi
+      delay(5); 
       return _modbus.getResponseBuffer(0);
     }
     
@@ -157,6 +159,8 @@ uint32_t ACREL_DTSD1352::readHoldingRegister32(uint16_t address) {
   if (result == _modbus.ku8MBSuccess) {
     uint32_t high = _modbus.getResponseBuffer(0);
     uint32_t low = _modbus.getResponseBuffer(1);
+    // Giảm lag khi đọc nhiều thanh ghi
+    delay(5); 
     return (high << 16) | low;
   }
   
